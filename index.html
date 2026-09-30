@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GlowWave FM — Live Radio</title>
+<meta name="description" content="GlowWave FM for iPhone: free live radio with a glass Now Playing screen, 3-band equalizer, night mode and a world news ticker. Add it to your Home Screen.">
+<meta name="keywords" content="GlowWave FM iPhone, GlowWave FM app, iOS radio app, add to home screen radio, free online radio, live internet radio, 24/7 radio stream, Glow Network">
+<meta name="author" content="Glow Network">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#000000">
+<meta name="format-detection" content="telephone=no">
+<link rel="canonical" href="https://apple.glowwavefm.com/">
+<link rel="alternate" hreflang="en" href="https://apple.glowwavefm.com/">
+<link rel="alternate" hreflang="x-default" href="https://apple.glowwavefm.com/">
+<link rel="icon" id="favicon" type="image/png" href="https://glownetwork.net/the-glow-network.png">
+<!-- iOS Home Screen / standalone app behaviour -->
+<link rel="apple-touch-icon" href="https://glownetwork.net/the-glow-network.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="GlowWave">
+<link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%22GlowWave%20FM%22%2C%22short_name%22%3A%22GlowWave%22%2C%22start_url%22%3A%22https%3A%2F%2Fapple.glowwavefm.com%2F%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23000000%22%2C%22theme_color%22%3A%22%23000000%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22https%3A%2F%2Fglownetwork.net%2Fthe-glow-network.png%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fpng%22%7D%5D%7D">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GlowWave FM">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="GlowWave FM — Live Radio for iPhone">
+<meta property="og:description" content="Free live radio with a glass Now Playing screen. Add it to your Home Screen.">
+<meta property="og:url" content="https://apple.glowwavefm.com/">
+<meta property="og:image" content="https://glownetwork.net/the-glow-network.png">
+<meta property="og:image:alt" content="GlowWave FM logo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GlowWave FM — Live Radio for iPhone">
+<meta name="twitter:description" content="Free live radio with a glass Now Playing screen. Add it to your Home Screen.">
+<meta name="twitter:image" content="https://glownetwork.net/the-glow-network.png">
+<link rel="dns-prefetch" href="https://wavehub.uk">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebSite","@id":"https://glowwavefm.com/#site","name":"GlowWave FM","url":"https://glowwavefm.com/","inLanguage":"en","publisher":{"@id":"https://glownetwork.net/#org"}},
+{"@type":"Organization","@id":"https://glownetwork.net/#org","name":"Glow Network","url":"https://glownetwork.net/","logo":"https://glownetwork.net/the-glow-network.png"},
+{"@type":"RadioStation","@id":"https://apple.glowwavefm.com/#station","name":"GlowWave FM","url":"https://apple.glowwavefm.com/","logo":"https://glownetwork.net/the-glow-network.png","image":"https://glownetwork.net/the-glow-network.png","description":"GlowWave FM is a free online radio station streaming live 24/7 from the Glow Network.","isAccessibleForFree":true,"inLanguage":"en","parentOrganization":{"@id":"https://glownetwork.net/#org"},"sameAs":["https://glowwavefm.com/","https://glowwavefm.com/player","https://glownetwork.net/glowwave.html","https://android-auto.glowwavefm.com/","https://player.glowwavefm.com/","https://chill.glowwavefm.com/","https://glowtv.org/radio","https://glowtv.shop/radio"]},
+{"@type":"WebPage","@id":"https://apple.glowwavefm.com/","url":"https://apple.glowwavefm.com/","name":"GlowWave FM — Live Radio for iPhone","isPartOf":{"@id":"https://glowwavefm.com/#site"},"about":{"@id":"https://apple.glowwavefm.com/#station"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://glowwavefm.com/"},{"@type":"ListItem","position":2,"name":"iPhone Player","item":"https://apple.glowwavefm.com/"}]}},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How do I listen to GlowWave FM on iPhone?","acceptedAnswer":{"@type":"Answer","text":"Press the play button on this page. The station streams live in Safari, and keeps playing from the Lock Screen and Control Center."}},
+{"@type":"Question","name":"Is GlowWave FM free?","acceptedAnswer":{"@type":"Answer","text":"Yes. GlowWave FM is free to listen to, with no sign-up and no App Store app required."}},
+{"@type":"Question","name":"How do I add GlowWave FM to my Home Screen?","acceptedAnswer":{"@type":"Answer","text":"Tap the Share icon in Safari, then choose Add to Home Screen. GlowWave FM opens full-screen like an app, with no browser bars."}},
+{"@type":"Question","name":"Why is there no sound after pressing play?","acceptedAnswer":{"@type":"Answer","text":"Check the silent switch and volume on your iPhone, and the volume slider on the player. Browsers only start audio after you press play."}}
+]}]}
+</script>
+<style>
+:root{
+  --bg:#000000; --ink:#f5f5f7; --dim:rgba(245,245,247,.62); --dim2:rgba(245,245,247,.4);
+  --accent:#0a84ff; --pink:#ff375f; --mint:#30d5a0; --gold:#ffb020;
+  --glass:rgba(255,255,255,.07); --glass-hi:rgba(255,255,255,.14); --glass-line:rgba(255,255,255,.14);
+  --radius:28px; --radius-sm:18px;
+  --font:-apple-system,"SF Pro Display","SF Pro Text",system-ui,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html,body{height:100%}
+body{
+  font-family:var(--font);color:var(--ink);line-height:1.5;background:var(--bg);overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent);text-decoration:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:10px}
+button{font-family:inherit}
+
+/* Ambient Liquid-Glass backdrop: slow drifting colour blobs the glass panels reveal through blur */
+.aurora{position:fixed;inset:0;z-index:0;overflow:hidden}
+.aurora i{position:absolute;border-radius:50%;filter:blur(2px);opacity:.55;mix-blend-mode:screen;animation:drift 26s ease-in-out infinite alternate}
+.aurora i:nth-child(1){width:60vmax;height:60vmax;left:-20vmax;top:-24vmax;background:radial-gradient(circle,var(--pink),transparent 70%)}
+.aurora i:nth-child(2){width:55vmax;height:55vmax;right:-22vmax;top:-10vmax;background:radial-gradient(circle,var(--accent),transparent 70%);animation-delay:-8s}
+.aurora i:nth-child(3){width:50vmax;height:50vmax;left:10vmax;bottom:-28vmax;background:radial-gradient(circle,var(--mint),transparent 70%);animation-delay:-16s}
+.aurora i:nth-child(4){width:40vmax;height:40vmax;right:5vmax;bottom:-16vmax;background:radial-gradient(circle,var(--gold),transparent 70%);animation-delay:-4s}
+@keyframes drift{0%{transform:translate(0,0) scale(1)}100%{transform:translate(4vmax,5vmax) scale(1.12)}}
+
+.shell{position:relative;z-index:1;max-width:480px;margin:0 auto;min-height:100%;
+  padding:calc(env(safe-area-inset-top,0px)+.6rem) 1rem calc(64px + env(safe-area-inset-bottom,0px) + 1rem)}
+
+/* Glass primitive */
+.glass{background:var(--glass);backdrop-filter:blur(26px) saturate(180%);-webkit-backdrop-filter:blur(26px) saturate(180%);
+  border:1px solid var(--glass-line);border-radius:var(--radius);box-shadow:inset 0 1px 0 var(--glass-hi), 0 12px 40px rgba(0,0,0,.35)}
+
+/* Top bar */
+.topbar{position:sticky;top:calc(env(safe-area-inset-top,0px)+.6rem);z-index:5;display:flex;align-items:center;justify-content:space-between;
+  padding:.7rem 1rem;margin-bottom:1rem}
+.topbar .name{font-weight:650;font-size:1.05rem;letter-spacing:-.01em}
+.pill-btn{appearance:none;border:0;background:var(--glass);border:1px solid var(--glass-line);color:var(--ink);
+  border-radius:999px;padding:.5rem .9rem;font-size:.85rem;font-weight:550;backdrop-filter:blur(20px);
+  transition:transform .15s cubic-bezier(.2,.8,.2,1)}
+.pill-btn:active{transform:scale(.94)}
+
+/* Now playing card */
+.now-playing{padding:1.4rem 1.2rem 1.6rem;margin-bottom:1rem;text-align:center}
+.art-wrap{position:relative;width:min(62vw,230px);aspect-ratio:1;margin:0 auto 1rem;border-radius:26px;overflow:hidden;
+  background:#0b0b0d;box-shadow:0 18px 46px rgba(0,0,0,.5)}
+#viz{position:absolute;inset:0;width:100%;height:100%}
+.art-wrap img{position:absolute;left:50%;top:50%;width:40%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;
+  object-fit:cover;box-shadow:0 0 0 6px rgba(255,255,255,.06),0 10px 30px rgba(0,0,0,.5)}
+.np-title{font-size:1.3rem;font-weight:650;letter-spacing:-.01em}
+.np-sub{color:var(--dim);font-size:.92rem;margin-top:.15rem}
+.live-chip{display:inline-flex;align-items:center;gap:.4rem;margin-top:.7rem;padding:.3rem .75rem;border-radius:999px;
+  background:var(--glass);border:1px solid var(--glass-line);font-size:.78rem;color:var(--dim)}
+.live-chip .dot{width:7px;height:7px;border-radius:50%;background:#565a66}
+.live-chip[data-state="playing"] .dot{background:var(--pink);box-shadow:0 0 10px var(--pink);animation:pulse 1.3s infinite}
+.live-chip[data-state="loading"] .dot{background:var(--accent);animation:pulse .8s infinite}
+.live-chip[data-state="error"] .dot{background:#ff453a}
+@keyframes pulse{50%{opacity:.3}}
+
+.transport{display:flex;align-items:center;justify-content:center;gap:1.1rem;margin-top:1.3rem}
+#muteBtn.icon-btn{width:46px;height:46px}
+#playBtn{width:84px;height:84px;border-radius:50%;border:0;cursor:pointer;flex:none;
+  background:linear-gradient(160deg,#fff,#d9dbe0);color:#111;display:grid;place-items:center;
+  box-shadow:0 14px 34px rgba(0,0,0,.45);transition:transform .18s cubic-bezier(.34,1.56,.64,1)}
+#playBtn:active{transform:scale(.9)}
+#playBtn svg{width:34px;height:34px;fill:currentColor}
+.icon-btn{appearance:none;border:1px solid var(--glass-line);background:var(--glass);color:var(--ink);border-radius:50%;
+  display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(20px);transition:transform .15s cubic-bezier(.2,.8,.2,1)}
+.icon-btn:active{transform:scale(.88)}
+.icon-btn svg{width:18px;height:18px;fill:currentColor}
+.icon-btn[aria-pressed=true]{background:rgba(10,132,255,.28);border-color:rgba(10,132,255,.5);color:#fff}
+
+.vol-row{display:flex;align-items:center;gap:.6rem;margin-top:1.1rem;padding:0 .4rem}
+input[type=range]{-webkit-appearance:none;width:100%;height:28px;background:transparent}
+input[type=range]::-webkit-slider-runnable-track{height:5px;border-radius:99px;background:rgba(255,255,255,.18)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:#fff;
+  box-shadow:0 2px 8px rgba(0,0,0,.4);margin-top:-8.5px}
+input[type=range]::-moz-range-track{height:5px;border-radius:99px;background:rgba(255,255,255,.18)}
+input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radius:50%;background:#fff}
+
+/* Segmented control */
+.segmented{display:flex;background:rgba(255,255,255,.07);border:1px solid var(--glass-line);border-radius:14px;padding:3px;margin-top:1.1rem;gap:2px}
+.segmented button{flex:1;appearance:none;border:0;background:transparent;color:var(--dim);padding:.5rem 0;font-size:.85rem;
+  font-weight:550;border-radius:11px;cursor:pointer;transition:background .2s,color .2s}
+.segmented button[aria-selected=true]{background:rgba(255,255,255,.18);color:#fff;box-shadow:0 2px 6px rgba(0,0,0,.3)}
+
+/* Control tiles grid */
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-bottom:1rem}
+.tile{padding:1rem;display:flex;flex-direction:column;gap:.5rem;cursor:pointer;appearance:none;border:1px solid var(--glass-line);
+  text-align:left;color:var(--ink);transition:transform .15s cubic-bezier(.2,.8,.2,1)}
+.tile:active{transform:scale(.97)}
+.tile .ic{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:rgba(255,255,255,.12)}
+.tile .ic svg{width:18px;height:18px;fill:#fff}
+.tile b{font-size:.92rem;font-weight:600}
+.tile small{color:var(--dim);font-size:.76rem}
+.tile[aria-pressed=true]{background:rgba(10,132,255,.22);border-color:rgba(10,132,255,.45)}
+.tile[aria-pressed=true] .ic{background:var(--accent)}
+
+/* Grouped list (iOS Settings style) */
+.group{margin-bottom:1.2rem;overflow:hidden}
+.group h2{font-size:.8rem;text-transform:uppercase;letter-spacing:.02em;color:var(--dim);font-weight:600;
+  margin:0 0 .5rem 1.1rem}
+.group .rows{padding:0}
+.row-item{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 1.1rem;
+  border-bottom:1px solid var(--glass-line)}
+.row-item:last-child{border-bottom:0}
+.row-item span.lab{font-size:.95rem}
+.row-item p{color:var(--dim);font-size:.85rem;margin-top:.15rem;max-width:36ch}
+.faq-row{display:block;padding:.9rem 1.1rem;border-bottom:1px solid var(--glass-line)}
+.faq-row:last-child{border-bottom:0}
+.faq-row summary{cursor:pointer;font-weight:550;font-size:.95rem;list-style:none}
+.faq-row summary::-webkit-details-marker{display:none}
+.faq-row summary::after{content:'+';float:right;color:var(--dim)}
+.faq-row[open] summary::after{content:'–'}
+.faq-row p{color:var(--dim);font-size:.88rem;margin-top:.5rem}
+
+/* Bottom sheet */
+.sheet-scrim{position:fixed;inset:0;background:rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:opacity .25s;z-index:20}
+.sheet-scrim.open{opacity:1;pointer-events:auto}
+.sheet{position:fixed;left:0;right:0;bottom:0;transform:translateY(100%);transition:transform .32s cubic-bezier(.32,.9,.3,1);
+  z-index:21;border-radius:26px 26px 0 0;padding:.6rem 1.1rem calc(1.4rem + env(safe-area-inset-bottom,0px));max-width:480px;margin:0 auto}
+.sheet.open{transform:translateY(0)}
+.sheet .grabber{width:36px;height:5px;border-radius:99px;background:rgba(255,255,255,.28);margin:.3rem auto 1rem}
+.sheet h3{font-size:1.1rem;margin-bottom:.8rem}
+.sheet-row{display:flex;align-items:center;gap:.8rem;padding:.7rem 0;border-bottom:1px solid var(--glass-line)}
+.sheet-row:last-child{border-bottom:0}
+.sheet-row .lab{flex:1;font-size:.95rem}
+select{background:rgba(255,255,255,.1);color:var(--ink);border:1px solid var(--glass-line);border-radius:10px;
+  padding:.4rem .6rem;font:inherit;font-size:.88rem}
+select option{background:#1c1c1e}
+
+/* Install banner */
+.install-card{padding:1rem 1.1rem;margin-bottom:1.2rem;display:flex;gap:.8rem;align-items:flex-start}
+.install-card svg{flex:none;width:26px;height:26px;fill:var(--accent);margin-top:.1rem}
+.install-card b{font-size:.95rem}
+.install-card p{color:var(--dim);font-size:.85rem;margin-top:.2rem}
+.install-card button{margin-top:.6rem}
+
+h1.brand{font-size:1.5rem;font-weight:700;letter-spacing:-.02em;text-align:center;margin-bottom:.2rem}
+.lede{text-align:center;color:var(--dim);font-size:.95rem;margin-bottom:1.1rem}
+
+/* News ticker, glass style */
+#ticker{position:fixed;left:0;right:0;bottom:calc(64px + env(safe-area-inset-bottom,0px));z-index:4;display:flex;align-items:center;
+  height:36px;margin:0 auto;max-width:480px;left:50%;transform:translateX(-50%);width:calc(100% - 2rem);border-radius:14px;
+  background:rgba(20,20,24,.6);backdrop-filter:blur(22px);border:1px solid var(--glass-line);font-size:.8rem}
+#ticker[hidden]{display:none}
+.track{flex:1;overflow:hidden;white-space:nowrap}
+.move{display:inline-block;padding-left:100%;animation:scroll var(--dur,60s) linear infinite}
+#ticker:hover .move,#ticker:focus-within .move{animation-play-state:paused}
+.move a{color:var(--ink);text-decoration:none;margin-right:2rem}
+.move em{font-style:normal;color:var(--pink);margin-right:.35rem;font-weight:600}
+@keyframes scroll{to{transform:translateX(-100%)}}
+#tickX{flex:none;background:none;border:0;color:var(--dim);cursor:pointer;padding:0 .7rem;font-size:1rem}
+
+/* Bottom tab bar */
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:6;display:flex;justify-content:space-around;
+  padding:.5rem 0 calc(.5rem + env(safe-area-inset-bottom,0px));background:rgba(15,15,18,.7);
+  backdrop-filter:blur(26px) saturate(180%);border-top:1px solid var(--glass-line)}
+.tabbar button{appearance:none;border:0;background:none;color:var(--dim);display:flex;flex-direction:column;
+  align-items:center;gap:.15rem;font-size:.68rem;cursor:pointer;padding:.2rem .6rem}
+.tabbar button svg{width:22px;height:22px;fill:currentColor}
+.tabbar button[aria-current=true]{color:#fff}
+
+section[id]{scroll-margin-top:70px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.aurora i{animation:none}}
+</style>
+</head>
+<body oncontextmenu="return false;">
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<div class="shell">
+
+  <div class="topbar glass">
+    <span class="name">GlowWave FM</span>
+    <button class="pill-btn" id="moreBtn" type="button" aria-haspopup="true">More</button>
+  </div>
+
+  <h1 class="brand">GlowWave</h1>
+  <p class="lede">Free live radio, glass and simple.</p>
+
+  <div id="installBanner" class="glass install-card" hidden>
+    <svg viewBox="0 0 24 24"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 2h14v2H5z"/></svg>
+    <div>
+      <b>Add GlowWave to your Home Screen</b>
+      <p id="installText">Tap the Share icon in Safari, then choose "Add to Home Screen".</p>
+      <button class="pill-btn" id="installBtn" type="button">Got it</button>
+    </div>
+  </div>
+
+  <section id="home">
+    <div class="now-playing glass">
+      <div class="art-wrap" id="stage">
+        <canvas id="viz" aria-hidden="true"></canvas>
+        <img id="logo" src="https://glownetwork.net/the-glow-network.png" alt="GlowWave FM logo">
+      </div>
+      <div class="np-title">GlowWave FM</div>
+      <div class="np-sub" id="sub">Live stream</div>
+      <div class="live-chip" id="live" data-state="idle" role="status" aria-live="polite"><i class="dot"></i><span id="statusText">Ready to play</span></div>
+
+      <div class="transport">
+        <button class="icon-btn" id="muteBtn" type="button" aria-label="Mute" aria-pressed="false">
+          <svg viewBox="0 0 24 24"><path d="M3 10v4h4l5 5V5L7 10H3z"/></svg>
+        </button>
+        <button id="playBtn" aria-label="Play GlowWave FM"><svg viewBox="0 0 24 24"><path id="playIcon" d="M8 5v14l11-7z"/></svg></button>
+        <button class="icon-btn" id="wakeBtn" type="button" aria-label="Keep screen awake" aria-pressed="false">
+          <svg viewBox="0 0 24 24"><path d="M17 1H7c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm0 18H7V4h10v15z"/></svg>
+        </button>
+      </div>
+
+      <div class="vol-row">
+        <label for="vol" class="sr">Volume</label>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--dim)" aria-hidden="true"><path d="M3 10v4h4l5 5V5L7 10H3z"/></svg>
+        <input id="vol" type="range" min="0" max="1" step="0.01" value="0.8">
+      </div>
+
+      <div class="segmented" role="tablist" aria-label="Visualizer style">
+        <button role="tab" aria-selected="true" data-mode="0">Bars</button>
+        <button role="tab" aria-selected="false" data-mode="1">Wave</button>
+        <button role="tab" aria-selected="false" data-mode="2">Ring</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="studio">
+    <div class="tiles">
+      <button class="tile glass" id="nightBtn" type="button" aria-pressed="false">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M12.3 2a9.94 9.94 0 00-4.3 1c3 1.3 5 4.3 5 7.7 0 3.4-2 6.4-5 7.7 1.2.6 2.6 1 4 1 5.5 0 10-4.5 10-10S17.8 2 12.3 2z"/></svg></span>
+        <b>Night mode</b><small>Evens out loud &amp; quiet</small>
+      </button>
+      <button class="tile glass" id="tickToggle" type="button" aria-pressed="true">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v2H4zM4 11h16v2H4zM4 18h10v2H4z"/></svg></span>
+        <b>News ticker</b><small>Reuters &amp; Bellingcat</small>
+      </button>
+      <button class="tile glass" id="fsBtn" type="button">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg></span>
+        <b>Fullscreen</b><small>Screensaver mode</small>
+      </button>
+      <button class="tile glass" id="shareBtn" type="button">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.47.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg></span>
+        <b>Share</b><small>Send the station</small>
+      </button>
+    </div>
+
+    <div class="glass" style="padding:1.1rem 1.2rem;margin-bottom:1.2rem">
+      <h2 style="font-size:.85rem;text-transform:uppercase;letter-spacing:.02em;color:var(--dim);margin-bottom:.8rem">Equalizer</h2>
+      <div class="sheet-row"><span class="lab">Preset</span><select id="preset"></select></div>
+      <div class="sheet-row"><span class="lab" style="flex:none;width:4.5rem">Bass</span><input id="bass" type="range" min="-12" max="12" step="1" value="0"></div>
+      <div class="sheet-row"><span class="lab" style="flex:none;width:4.5rem">Mid</span><input id="mid" type="range" min="-12" max="12" step="1" value="0"></div>
+      <div class="sheet-row"><span class="lab" style="flex:none;width:4.5rem">Treble</span><input id="treb" type="range" min="-12" max="12" step="1" value="0"></div>
+    </div>
+
+    <div class="glass" style="padding:1.1rem 1.2rem;margin-bottom:1.2rem">
+      <h2 style="font-size:.85rem;text-transform:uppercase;letter-spacing:.02em;color:var(--dim);margin-bottom:.8rem">Sleep timer</h2>
+      <div class="sheet-row">
+        <span class="lab">Fade out after</span>
+        <select id="sleep">
+          <option value="0">Off</option><option value="15">15 min</option>
+          <option value="30">30 min</option><option value="60">60 min</option>
+        </select>
+      </div>
+      <div class="sheet-row"><span class="lab">Copy stream link</span><button class="pill-btn" id="copyBtn" type="button">Copy</button></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="group">
+      <h2>About</h2>
+      <div class="rows glass">
+        <div class="row-item"><span class="lab">GlowWave FM is free, live radio from the Glow Network, 24/7 in your browser, no sign-up.</span></div>
+      </div>
+    </div>
+    <div class="group">
+      <h2>More from Glow Network</h2>
+      <div class="rows glass">
+        <div class="row-item"><a class="lab" href="https://glowwavefm.com/player">GlowWave Player</a></div>
+        <div class="row-item"><a class="lab" href="https://glownetwork.net/glowwave.html">GlowWave Studio</a></div>
+        <div class="row-item"><a class="lab" href="https://android-auto.glowwavefm.com/">GlowWave for Android Auto</a></div>
+        <div class="row-item"><a class="lab" href="https://glowtv.org/radio">GlowTV Radio</a></div>
+      </div>
+    </div>
+    <div class="group" id="faq">
+      <h2>Questions</h2>
+      <div class="rows glass">
+        <details class="faq-row"><summary>How do I listen on iPhone?</summary><p>Press the play button. The station streams live in Safari, and keeps playing from the Lock Screen and Control Center.</p></details>
+        <details class="faq-row"><summary>Is it free?</summary><p>Yes. GlowWave FM is free to listen to, with no sign-up and no App Store app required.</p></details>
+        <details class="faq-row"><summary>How do I add it to my Home Screen?</summary><p>Tap the Share icon in Safari, then choose Add to Home Screen. It opens full-screen, with no browser bars.</p></details>
+        <details class="faq-row"><summary>Why is there no sound?</summary><p>Check the silent switch and volume on your iPhone, and the volume slider above. Browsers only start audio after you press play.</p></details>
+        <details class="faq-row"><summary>Where do the headlines come from?</summary><p>The ticker links to live Reuters and Bellingcat coverage. Each headline opens the original article.</p></details>
+      </div>
+    </div>
+    <p style="text-align:center;color:var(--dim2);font-size:.8rem;margin-top:1rem">© <span id="yr"></span> GlowWave FM · part of the Glow Network</p>
+  </section>
+</div>
+
+<div id="ticker" role="region" aria-label="News headlines">
+  <div class="track"><div class="move" id="move"></div></div>
+  <button id="tickX" type="button" aria-label="Hide news ticker">×</button>
+</div>
+
+<nav class="tabbar" aria-label="Sections">
+  <button data-target="home" aria-current="true"><svg viewBox="0 0 24 24"><path d="M12 3l9 8h-3v9h-5v-6H11v6H6v-9H3z"/></svg>Home</button>
+  <button data-target="studio" aria-current="false"><svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h10v2H4z"/></svg>Studio</button>
+  <button data-target="about" aria-current="false"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 4a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm2 12h-4v-1h1v-5h-1v-1h3v6h1z"/></svg>About</button>
+</nav>
+
+<div class="sheet-scrim" id="scrim"></div>
+<div class="sheet glass" id="sheet">
+  <div class="grabber"></div>
+  <h3>More</h3>
+  <div class="sheet-row"><span class="lab">Add to Home Screen</span><button class="pill-btn" id="installBtn2" type="button">Show me how</button></div>
+  <div class="sheet-row"><span class="lab">Keyboard: space to play, M to mute, F fullscreen</span></div>
+</div>
+
+<noscript><p style="text-align:center;padding:1rem">GlowWave FM needs JavaScript for its player.</p></noscript>
+
+<script>
+(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const PRIMARY = 'https://wavehub.uk/api/functions/stationStream?uuid=1cf33481-5bc1-4e66-a95f-9d5278542df1';
+  const BACKUP = ['https://cdn.woodpecker-becrux.ts.net', '/stream'].join('');
+  const LOGO = 'https://glownetwork.net/the-glow-network.png';
+  const LIVE_ARTWORK = true;
+  const STATIC_ART = [96,128,192,256,384,512].map(s => ({ src: LOGO, sizes: s+'x'+s, type: 'image/png' }));
+  const SOURCES = [{url:PRIMARY,cors:true},{url:BACKUP,cors:true},{url:PRIMARY,cors:false},{url:BACKUP,cors:false}];
+  const BINS = 64;
+  $('yr').textContent = new Date().getFullYear();
+
+  const store = {};
+  try { Object.assign(store, JSON.parse(localStorage.getItem('gwfm_apple') || '{}')); } catch (e) {}
+  function save(k, v) { store[k] = v; try { localStorage.setItem('gwfm_apple', JSON.stringify(store)); } catch (e) {} }
+
+  /* ---- News ticker: rss2json first, raw-XML CORS proxy as fallback, section links as last resort ---- */
+  const RSS_FEEDS = {
+    Reuters: 'https://news.google.com/rss/search?q=site:reuters.com+(war+OR+politics+OR+conflict)+when:1d&hl=en-US&gl=US&ceid=US:en',
+    Bellingcat: 'https://www.bellingcat.com/feed/'
+  };
+  const FALLBACK = [
+    {source:'Reuters',title:'World news',url:'https://www.reuters.com/world/'},
+    {source:'Reuters',title:'Middle East',url:'https://www.reuters.com/world/middle-east/'},
+    {source:'Reuters',title:'Europe',url:'https://www.reuters.com/world/europe/'},
+    {source:'Bellingcat',title:'Latest investigations',url:'https://www.bellingcat.com/'}
+  ];
+  const move = $('move');
+  function renderTicker(items) {
+    move.textContent = '';
+    items.slice(0, 20).forEach(it => {
+      const a = document.createElement('a');
+      a.href = it.url; a.target = '_blank'; a.rel = 'noopener noreferrer';
+      const em = document.createElement('em'); em.textContent = it.source + ':';
+      a.append(em, document.createTextNode(it.title));
+      move.append(a);
+    });
+    move.style.setProperty('--dur', Math.max(30, items.length * 9) + 's');
+  }
+  renderTicker(FALLBACK);
+  function decodeXML(str) {
+    return str.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')
+      .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+      .replace(/&quot;/g, '"').replace(/&#0?39;|&apos;/g, "'").trim();
+  }
+  function parseXML(xml, source, max) {
+    const out = [];
+    for (const m of xml.matchAll(/<item>([\s\S]*?)<\/item>/g)) {
+      const t = /<title>([\s\S]*?)<\/title>/.exec(m[1]);
+      const l = /<link>([\s\S]*?)<\/link>/.exec(m[1]);
+      if (!t || !l) continue;
+      let title = decodeXML(t[1]);
+      if (source === 'Reuters') title = title.replace(/\s+-\s+Reuters$/i, '');
+      const link = decodeXML(l[1]);
+      if (/^https:\/\//.test(link)) out.push({ source, title, url: link });
+      if (out.length >= max) break;
+    }
+    return out;
+  }
+  async function fetchFeed(source, url) {
+    try {
+      const r = await fetch('https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(url));
+      const d = await r.json();
+      if (d.items && d.items.length) {
+        return d.items.slice(0, 8).map(i => ({
+          source, url: i.link, title: String(i.title || '').replace(/\s+-\s+Reuters$/i, '')
+        })).filter(i => /^https?:\/\//.test(i.url) && i.title);
+      }
+    } catch (e) {}
+    try {
+      const r2 = await fetch('https://api.allorigins.win/raw?url=' + encodeURIComponent(url));
+      const xml = await r2.text();
+      const items = parseXML(xml, source, 8);
+      if (items.length) return items;
+    } catch (e) {}
+    return [];
+  }
+  async function updateTicker() {
+    const lists = await Promise.all(Object.entries(RSS_FEEDS).map(([n, u]) => fetchFeed(n, u)));
+    const items = [];
+    for (let i = 0; i < 8; i++) lists.forEach(l => { if (l[i]) items.push(l[i]); });
+    if (items.length) renderTicker(items);
+  }
+  updateTicker(); setInterval(updateTicker, 10 * 60000);
+
+  const tt = $('tickToggle');
+  if (store.tick === 0) { $('ticker').hidden = true; tt.setAttribute('aria-pressed', 'false'); }
+  tt.addEventListener('click', () => {
+    const on = tt.getAttribute('aria-pressed') !== 'true';
+    tt.setAttribute('aria-pressed', on); $('ticker').hidden = !on; save('tick', on ? 1 : 0);
+  });
+  $('tickX').addEventListener('click', () => { $('ticker').hidden = true; tt.setAttribute('aria-pressed', 'false'); save('tick', 0); });
+
+  /* ---- Audio engine ---- */
+  const live = $('live'), statusText = $('statusText'), sub = $('sub');
+  const playBtn = $('playBtn'), playIcon = $('playIcon');
+  const canvas = $('viz'), c = canvas.getContext('2d'), logo = $('logo'), favLink = $('favicon');
+  const PLAY = 'M8 5v14l11-7z', PAUSE = 'M6 5h4v14H6zM14 5h4v14h-4z';
+  let audio = null, ctx = null, analyser = null, freq = null, sourceNode = null, bassNode, midNode, trebNode, compNode;
+  let mode = 'idle', playing = false, volume = store.vol ?? 0.8, muted = false, modeIdx = store.style ?? 0, sleepTimer = null;
+  let bassDb = 0;
+  const palette = ['#0a84ff', '#ff375f'];
+  const levels = new Float32Array(BINS);
+
+  $('vol').value = volume;
+
+  function setStatus(state, text) { live.dataset.state = state; statusText.textContent = text; }
+  function setPlaying(p) {
+    playing = p;
+    playIcon.setAttribute('d', p ? PAUSE : PLAY);
+    playBtn.setAttribute('aria-label', p ? 'Pause GlowWave FM' : 'Play GlowWave FM');
+    document.title = (p ? '▶ ' : '') + 'GlowWave FM — Live Radio';
+    if (!p) favLink.href = LOGO;
+    setMeta(STATIC_ART);
+    if ('mediaSession' in navigator) navigator.mediaSession.playbackState = p ? 'playing' : 'paused';
+  }
+  function teardown() {
+    if (audio) { audio.onerror = null; audio.pause(); audio.removeAttribute('src'); audio.load(); }
+    if (sourceNode) { try { sourceNode.disconnect(); } catch (e) {} sourceNode = null; }
+    audio = null;
+  }
+  async function start(i = 0) {
+    teardown();
+    if (i >= SOURCES.length) { setPlaying(false); setStatus('error', 'Stream unavailable. Try again soon.'); return; }
+    if (i === 0) setStatus('loading', 'Connecting…');
+    const s = SOURCES[i], a = new Audio();
+    audio = a;
+    if (s.cors) a.crossOrigin = 'anonymous';
+    a.volume = volume; a.muted = muted;
+    let moved = false;
+    const next = () => { if (moved || audio !== a) return; moved = true; start(i + 1); };
+    a.onerror = next; a.src = s.url;
+    try { await a.play(); }
+    catch (e) {
+      if (e.name === 'NotAllowedError') { teardown(); setPlaying(false); setStatus('idle', 'Press play to start'); return; }
+      next(); return;
+    }
+    if (audio !== a || moved) return;
+    if (s.cors) {
+      try {
+        ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
+        if (!analyser) {
+          analyser = ctx.createAnalyser(); analyser.fftSize = 256; analyser.smoothingTimeConstant = .82;
+          bassNode = ctx.createBiquadFilter(); bassNode.type = 'lowshelf'; bassNode.frequency.value = 160; bassNode.gain.value = 0;
+          midNode = ctx.createBiquadFilter(); midNode.type = 'peaking'; midNode.frequency.value = 1000; midNode.Q.value = .8; midNode.gain.value = 0;
+          trebNode = ctx.createBiquadFilter(); trebNode.type = 'highshelf'; trebNode.frequency.value = 5000; trebNode.gain.value = 0;
+          compNode = ctx.createDynamicsCompressor(); setNight(!!store.night);
+          const q = store.eq || [0, 0, 0]; applyEQ(q);
+          bassNode.connect(midNode); midNode.connect(trebNode); trebNode.connect(compNode); compNode.connect(analyser); analyser.connect(ctx.destination);
+          freq = new Uint8Array(analyser.frequencyBinCount);
+        }
+        if (ctx.state === 'suspended') await ctx.resume();
+        sourceNode = ctx.createMediaElementSource(a);
+        sourceNode.connect(bassNode);
+        mode = 'live';
+      } catch (e) { mode = 'sim'; }
+    } else mode = 'sim';
+    setPlaying(true);
+    setStatus('playing', i === 1 || i === 3 ? 'On air (backup stream)' : 'On air');
+    a.onerror = () => { if (playing) { setStatus('loading', 'Reconnecting…'); start(0); } };
+  }
+  function stop() { teardown(); setPlaying(false); setStatus('idle', 'Paused'); mode = 'idle'; }
+  function toggle() { playing ? stop() : start(0); }
+  playBtn.addEventListener('click', toggle);
+
+  function setVol(v) { volume = Math.min(1, Math.max(0, v)); $('vol').value = volume; if (audio) audio.volume = volume; save('vol', volume); }
+  function toggleMute() { muted = !muted; if (audio) audio.muted = muted; $('muteBtn').setAttribute('aria-pressed', muted); }
+  $('vol').addEventListener('input', e => setVol(+e.target.value));
+  $('muteBtn').addEventListener('click', toggleMute);
+
+  document.querySelectorAll('.segmented button').forEach(btn => btn.addEventListener('click', () => {
+    document.querySelectorAll('.segmented button').forEach(b => b.setAttribute('aria-selected', b === btn));
+    modeIdx = +btn.dataset.mode; save('style', modeIdx);
+  }));
+  document.querySelectorAll('.segmented button')[modeIdx] && document.querySelectorAll('.segmented button').forEach((b,i) => b.setAttribute('aria-selected', i === modeIdx));
+
+  $('fsBtn').addEventListener('click', () => {
+    const st = $('stage');
+    document.fullscreenElement ? document.exitFullscreen() : st.requestFullscreen && st.requestFullscreen().catch(() => {});
+  });
+  $('shareBtn').addEventListener('click', async () => {
+    const d = { title: 'GlowWave FM', text: 'Listen live to GlowWave FM', url: 'https://apple.glowwavefm.com/' };
+    try { if (navigator.share) await navigator.share(d); else { await navigator.clipboard.writeText(d.url); } } catch (e) {}
+  });
+  $('copyBtn').addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(PRIMARY); $('copyBtn').textContent = 'Copied'; setTimeout(() => $('copyBtn').textContent = 'Copy', 1800); } catch (e) {}
+  });
+  $('sleep').addEventListener('change', e => {
+    clearTimeout(sleepTimer);
+    const m = +e.target.value;
+    if (m) sleepTimer = setTimeout(fadeStop, m * 60000);
+  });
+  function fadeStop() {
+    if (!audio) { stop(); return; }
+    const v0 = volume; let n = 20;
+    const iv = setInterval(() => {
+      n--; if (audio) audio.volume = Math.max(0, v0 * n / 20);
+      if (n <= 0 || !audio) { clearInterval(iv); stop(); sub.textContent = 'Sleep timer ended'; }
+    }, 1000);
+  }
+
+  /* EQ + presets */
+  const eqVals = () => [+$('bass').value, +$('mid').value, +$('treb').value];
+  function applyEQ(v) {
+    $('bass').value = v[0]; $('mid').value = v[1]; $('treb').value = v[2];
+    if (bassNode) bassNode.gain.value = v[0];
+    if (midNode) midNode.gain.value = v[1];
+    if (trebNode) trebNode.gain.value = v[2];
+    save('eq', v);
+  }
+  const PRESETS = { Flat: [0,0,0], 'Bass boost': [8,0,2], Vocal: [-2,4,2], Night: [3,-2,-3], Bright: [0,1,7] };
+  [...Object.keys(PRESETS), 'Custom'].forEach(k => { const o = document.createElement('option'); o.textContent = k; $('preset').append(o); });
+  const startEQ = store.eq || [0, 0, 0];
+  $('bass').value = startEQ[0]; $('mid').value = startEQ[1]; $('treb').value = startEQ[2];
+  $('preset').value = Object.keys(PRESETS).find(k => PRESETS[k].join() === startEQ.join()) || 'Custom';
+  ['bass', 'mid', 'treb'].forEach(id => $(id).addEventListener('input', () => { applyEQ(eqVals()); $('preset').value = 'Custom'; }));
+  $('preset').addEventListener('change', e => { if (PRESETS[e.target.value]) applyEQ(PRESETS[e.target.value]); });
+
+  function setNight(on) {
+    if (!compNode) return;
+    compNode.threshold.value = on ? -45 : 0; compNode.knee.value = on ? 20 : 0; compNode.ratio.value = on ? 10 : 1;
+    compNode.attack.value = .01; compNode.release.value = .3;
+  }
+  const nb = $('nightBtn'); nb.setAttribute('aria-pressed', !!store.night);
+  nb.addEventListener('click', () => { const on = nb.getAttribute('aria-pressed') !== 'true'; nb.setAttribute('aria-pressed', on); save('night', on); setNight(on); });
+
+  /* Keep screen awake */
+  let wl = null; const wb = $('wakeBtn');
+  const lockScreen = async () => { try { wl = await navigator.wakeLock.request('screen'); } catch (e) {} };
+  if (!('wakeLock' in navigator)) wb.style.display = 'none';
+  wb.addEventListener('click', async () => {
+    const on = wb.getAttribute('aria-pressed') !== 'true'; wb.setAttribute('aria-pressed', on);
+    if (on) await lockScreen(); else if (wl) { try { await wl.release(); } catch (e) {} wl = null; }
+  });
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && wb.getAttribute('aria-pressed') === 'true') lockScreen(); });
+
+  /* Add to Home Screen — iOS has no install prompt, so guide people; other browsers get the real prompt */
+  const isStandalone = window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+  const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+  const banner = $('installBanner'), installText = $('installText');
+  let installEvt = null;
+  if (!isStandalone) {
+    if (isIOS) { banner.hidden = false; }
+    else {
+      addEventListener('beforeinstallprompt', e => { e.preventDefault(); installEvt = e; banner.hidden = false; installText.textContent = 'Tap below to add GlowWave to your Home Screen.'; });
+    }
+  }
+  async function runInstall() {
+    if (installEvt) { installEvt.prompt(); await installEvt.userChoice; installEvt = null; banner.hidden = true; return; }
+    if (isIOS) { banner.hidden = true; return; }
+    installText.textContent = 'Use your browser menu and choose "Add to Home screen" or "Install app".';
+  }
+  $('installBtn').addEventListener('click', runInstall);
+  $('installBtn2').addEventListener('click', runInstall);
+
+  /* Bottom sheet */
+  const sheet = $('sheet'), scrim = $('scrim'), moreBtn = $('moreBtn');
+  function openSheet() { sheet.classList.add('open'); scrim.classList.add('open'); }
+  function closeSheet() { sheet.classList.remove('open'); scrim.classList.remove('open'); }
+  moreBtn.addEventListener('click', openSheet);
+  scrim.addEventListener('click', closeSheet);
+
+  /* Tab bar */
+  document.querySelectorAll('.tabbar button').forEach(btn => btn.addEventListener('click', () => {
+    document.querySelectorAll('.tabbar button').forEach(b => b.setAttribute('aria-current', b === btn));
+    $(btn.dataset.target).scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }));
+
+  document.addEventListener('keydown', e => {
+    const t = e.target.tagName;
+    if (/^(INPUT|SELECT|TEXTAREA)$/.test(t)) return;
+    if (e.code === 'Space' && !/^(BUTTON|SUMMARY|A)$/.test(t)) { e.preventDefault(); toggle(); }
+    else if (e.key === 'm') toggleMute();
+    else if (e.key === 'f') $('fsBtn').click();
+  });
+
+  function setMeta(artw) {
+    if (!('mediaSession' in navigator) || !window.MediaMetadata) return;
+    try { navigator.mediaSession.metadata = new MediaMetadata({ title: 'GlowWave FM', artist: 'Live radio', album: 'Glow Network', artwork: artw }); } catch (e) {}
+  }
+  if ('mediaSession' in navigator) {
+    setMeta(STATIC_ART);
+    navigator.mediaSession.setActionHandler('play', () => { if (!playing) start(0); });
+    navigator.mediaSession.setActionHandler('pause', stop);
+    try { navigator.mediaSession.setActionHandler('stop', stop); } catch (e) {}
+  }
+
+  const artCanvas = document.createElement('canvas'); artCanvas.width = artCanvas.height = 256;
+  const art = artCanvas.getContext('2d');
+  let logoImg = null;
+  const li = new Image(); li.crossOrigin = 'anonymous'; li.onload = () => { logoImg = li; }; li.src = LOGO;
+  function drawArtwork() {
+    const g = art.createLinearGradient(0, 256, 0, 0);
+    g.addColorStop(0, palette[0]); g.addColorStop(1, palette[1]);
+    art.fillStyle = '#000'; art.fillRect(0, 0, 256, 256); art.fillStyle = g;
+    const n = 16, bw = 10, gap = (256 - n * bw) / (n + 1);
+    for (let i = 0; i < n; i++) { const h = Math.max(8, levels[Math.floor(i * 2.2)] * 200); art.beginPath(); art.roundRect(gap + i * (bw + gap), 240 - h, bw, h, 5); art.fill(); }
+    if (logoImg) { art.save(); art.beginPath(); art.arc(128, 100, 52, 0, Math.PI * 2); art.clip(); art.drawImage(logoImg, 76, 48, 104, 104); art.restore(); }
+    try { return artCanvas.toDataURL('image/png'); } catch (e) { return null; }
+  }
+  setInterval(() => {
+    if (!LIVE_ARTWORK || !playing) return;
+    const u = drawArtwork(); if (u) setMeta([{ src: u, sizes: '256x256', type: 'image/png' }]);
+  }, 1000);
+
+  function readLevels(t) {
+    if (playing && mode === 'live' && analyser) {
+      analyser.getByteFrequencyData(freq);
+      for (let i = 0; i < BINS; i++) levels[i] = freq[Math.min(freq.length - 1, Math.floor(i * .75))] / 255;
+    } else if (playing && mode === 'sim') {
+      const beat = (Math.sin(t / 230) + 1) / 2;
+      for (let i = 0; i < BINS; i++) {
+        const fall = 1 - i / BINS * .7;
+        const v = fall * (.35 + .45 * beat * Math.abs(Math.sin(t / 400 + i * .5)) + .2 * Math.abs(Math.sin(t / 130 + i * 1.7)));
+        levels[i] += (v - levels[i]) * .25;
+      }
+    } else for (let i = 0; i < BINS; i++) levels[i] += ((.04 + .03 * Math.sin(t / 900 + i * .4)) - levels[i]) * .1;
+  }
+  function resize() { const r = canvas.getBoundingClientRect(), d = Math.min(devicePixelRatio || 1, 2); canvas.width = r.width * d; canvas.height = r.height * d; }
+  addEventListener('resize', resize); document.addEventListener('fullscreenchange', resize); resize();
+  function grad(x0, y0, x1, y1) { const g = c.createLinearGradient(x0, y0, x1, y1); g.addColorStop(0, palette[0]); g.addColorStop(1, palette[1]); return g; }
+  function draw(t) {
+    readLevels(t);
+    const W = canvas.width, H = canvas.height, cx = W / 2, cy = H / 2;
+    c.clearRect(0, 0, W, H); c.shadowColor = palette[1]; c.shadowBlur = W * .02; c.lineCap = 'round';
+    let avg = 0; for (let i = 0; i < 12; i++) avg += levels[i]; avg /= 12;
+    logo.style.transform = `translate(-50%,-50%) scale(${1 + avg * .18})`;
+    if (modeIdx === 0) {
+      const n = 32, gap = W / n, bw = gap * .55; c.fillStyle = grad(0, H, 0, 0);
+      for (let i = 0; i < n; i++) {
+        const v = levels[Math.floor(i * BINS / n * .9)], h = Math.max(H * .02, v * H * .8);
+        c.beginPath(); c.roundRect(i * gap + (gap - bw) / 2, H - h - H * .06, bw, h, bw / 2); c.fill();
+      }
+    } else if (modeIdx === 1) {
+      c.strokeStyle = grad(0, 0, W, 0); c.lineWidth = W * .012; c.beginPath();
+      for (let i = 0; i < BINS; i++) {
+        const x = i / (BINS - 1) * W, y = cy + (i % 2 ? -1 : 1) * levels[i] * H * .34;
+        i ? c.quadraticCurveTo(x - W / BINS / 2, cy + (i % 2 ? 1 : -1) * levels[i - 1] * H * .34, x, y) : c.moveTo(x, y);
+      }
+      c.stroke();
+    } else {
+      const n = 72, r0 = W * .22, rot = t / 9000; c.strokeStyle = grad(0, 0, W, H); c.lineWidth = W * .012;
+      for (let i = 0; i < n; i++) {
+        const k = i < n / 2 ? i : n - 1 - i, v = levels[Math.floor(k * BINS / (n / 2) * .8)];
+        const a = i / n * Math.PI * 2 + rot, r1 = r0 + W * .03 + v * W * .2;
+        c.beginPath(); c.moveTo(cx + Math.cos(a) * r0, cy + Math.sin(a) * r0); c.lineTo(cx + Math.cos(a) * r1, cy + Math.sin(a) * r1); c.stroke();
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
+
+  const fc = document.createElement('canvas'); fc.width = fc.height = 64;
+  const f = fc.getContext('2d');
+  setInterval(() => {
+    if (!playing) return;
+    f.clearRect(0, 0, 64, 64); f.fillStyle = '#000'; f.beginPath(); f.roundRect(0, 0, 64, 64, 14); f.fill();
+    const g = f.createLinearGradient(0, 64, 0, 0); g.addColorStop(0, palette[0]); g.addColorStop(1, palette[1]); f.fillStyle = g;
+    [1, 4, 8, 13, 20, 30].forEach((b, i) => { const h = Math.max(6, levels[b] * 52); f.beginPath(); f.roundRect(6 + i * 9.5, 58 - h, 6.5, h, 3); f.fill(); });
+    favLink.href = fc.toDataURL('image/png');
+  }, 120);
+})();
+</script>
+</body>
+</html>
